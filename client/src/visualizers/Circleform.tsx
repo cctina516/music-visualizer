@@ -1,12 +1,11 @@
 // 3rd party library imports
-import { createVerify } from "crypto";
-import P5 from "p5";
-import * as Tone from "tone";
+import P5 from 'p5';
+import * as Tone from 'tone';
 //import "p5/lib/addons/p5.sound";
 //import * as img from "../img/circleform_bg.jpeg";
 
 // project imports
-import { Visualizer } from "../Visualizers";
+import { Visualizer } from '../Visualizers';
 let particles: Particle[] = [];
 //let fft: any;
 class Particle {
@@ -43,7 +42,7 @@ class Particle {
 }
 
 export const CircleformVisualizer = new Visualizer(
-  "Circleform",
+  'Circleform',
   (p5: P5, analyzer: Tone.Analyser) => {
     const width = window.innerWidth;
     const height = window.innerHeight / 2;
@@ -57,7 +56,7 @@ export const CircleformVisualizer = new Visualizer(
 
     p5.translate(width / 2, height / 2);
 
-    p5.angleMode("degrees");
+    p5.angleMode('degrees');
 
     //p5.image(img, 0, 0, width, height);
     //const fft = new P5.FFT();
@@ -78,27 +77,6 @@ export const CircleformVisualizer = new Visualizer(
       }
       p5.endShape();
     }
-    // p5.beginShape();
-    // for (let i = ; i <= 180; i++) {
-    //   const amplitude = values[i] as number;
-    //   const r = p5.map(amplitude, -1, 1, 100, 300);
-    //   const x = r * p5.sin(i);
-    //   const y = r * p5.cos(i);
-    //   // Place vertex
-    //   p5.vertex(x, y);
-    // }
-    // p5.endShape();
-    // the other half of the circle
-    // p5.beginShape();
-    // for (let i = 0; i <= 180; i++) {
-    //   const amplitude = values[i] as number;
-    //   const r = p5.map(amplitude, -1, 1, 100, 300);
-    //   const x = r * -p5.sin(i);
-    //   const y = r * p5.cos(i);
-    //   // Place vertex
-    //   p5.vertex(x, y);
-    // }
-    // p5.endShape();
 
     let p = new Particle(p5);
     particles.push(p);
