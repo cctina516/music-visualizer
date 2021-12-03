@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -103,11 +103,42 @@ body,
     transform: rotate(360deg);
   }
 }
-
-.SaxophoneImage {
-  max-width: 12rem;
+.container {
   display: flex;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 35vh;
+}
+.xylophone {
+  display: flex;
+  align-items: center;
+}
+.key-button {
+  background-color: skyblue;
+  height: 200px;
+  width: 60px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  margin-right: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  margin-bottom: 10px;
+  justify-content: space-around;
+}
+
+.key-button:hover {
+  background-color: #6ca8c1;
+}
+.dot {
+  background-color: white;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
 }
