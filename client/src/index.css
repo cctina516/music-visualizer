@@ -142,3 +142,11 @@ body,
   width: 12px;
   border-radius: 50%;
 }
+
+.trumpetImage {
+  max-width: 20rem;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
