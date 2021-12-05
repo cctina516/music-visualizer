@@ -66,13 +66,18 @@ export function appReducer(state: AppState, action: DispatchAction): AppState {
       }
       case 'SET_SONGS': {
         const songs = args.get('songs');
+        console.log('here', args.get('songs'));
+        console.log('data', songs._tail.array[0]._root.entries);
+
         return state.set('songs', songs);
       }
       case 'PLAY_SONG': {
+        console.log('songs!', state.get('songs'));
         const notes = state
           .get('songs')
           .find((s: any) => s.get('id') === args.get('id'))
           .get('notes');
+        console.log('current song', notes);
         return state.set('notes', notes);
       }
       case 'STOP_SONG': {
@@ -88,8 +93,9 @@ export function appReducer(state: AppState, action: DispatchAction): AppState {
         const instruments: List<Instrument> = state.get('instruments');
         const visualizers: List<Visualizer> = state.get('visualizers');
 
-        const instrument = instruments.find(i => i.name === instrumentName);
-        const visualizer = visualizers.find(v => v.name === visualizerName);
+        const instrument = instruments.find((i) => i.name === instrumentName);
+        const visualizer = visualizers.find((v) => v.name === visualizerName);
+        console.log('Im instrument', instrument);
 
         return state
           .set('instrument', instrument)
@@ -101,7 +107,7 @@ export function appReducer(state: AppState, action: DispatchAction): AppState {
     }
   })();
 
-  console.debug(newState.update('socket', s => (s ? '[socket]' : s)).toJS());
+  console.debug(newState.update('socket', (s) => (s ? '[socket]' : s)).toJS());
 
   return newState;
 }

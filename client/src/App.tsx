@@ -20,27 +20,28 @@ function App() {
 
   useEffect(() => {
     initializeSocket(
-      async socket => {
+      async (socket) => {
         dispatch(new DispatchAction('SET_SOCKET', { socket }));
         const { songs } = await send(socket, 'get_songs', {});
+        console.log('socket songs', songs);
         dispatch(new DispatchAction('SET_SONGS', { songs }));
       },
       () => {
         dispatch(new DispatchAction('DELETE_SOCKET'));
-      },
+      }
     );
   }, []);
 
   return (
     <Router>
       <Switch>
-        <Route path="/">
+        <Route path='/'>
           <MainPage state={state} dispatch={dispatch} />
         </Route>
-        <Route path="/:instrument">
+        <Route path='/:instrument'>
           <MainPage state={state} dispatch={dispatch} />
         </Route>
-        <Route path="*">
+        <Route path='*'>
           <div>404</div>
         </Route>
       </Switch>
