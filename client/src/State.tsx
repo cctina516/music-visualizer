@@ -33,7 +33,7 @@ const visualizers = List([
   WaveformVisualizer,
   CircleformVisualizer,
   ParticleVisualizer,
-  //lushboughVisualizer,
+  lushboughVisualizer,
 ]);
 export const defaultState: AppState = Map<string, any>({
   instruments,

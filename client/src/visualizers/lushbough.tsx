@@ -4,7 +4,6 @@ import * as Tone from 'tone';
 
 // project imports
 import { Visualizer } from '../Visualizers';
-let img;
 
 export const lushboughVisualizer = new Visualizer(
   'lushbough',
@@ -16,12 +15,9 @@ export const lushboughVisualizer = new Visualizer(
 
     p5.background(100, 100, 0, 255);
     p5.angleMode('degrees')
-    img = p5.loadImage('drumSounds/fireBullet.png')
 
     p5.strokeWeight(dim * 0.01);
     p5.stroke(200, 35, 155, 200);
-    p5.ambientLight(50);
-    p5.noFill();
 
     const values = analyzer.getValue();
     p5.beginShape();
