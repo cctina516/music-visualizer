@@ -1,5 +1,6 @@
 // 3rd party
 import { List, Map } from 'immutable';
+import { FluteInstrument } from './instruments/Edreece-Afridi';
 
 // project dependencies
 import { PianoInstrument } from './instruments/Piano';
@@ -10,6 +11,7 @@ import { XylophoneInstrument } from './instruments/cctina516';
 import { ParticleVisualizer } from './visualizers/mai873-Particles';
 import { TrumpetInstrument } from './instruments/mai873-Trumpet';
 import { lushboughVisualizer } from './visualizers/lushbough';
+import { SinWaveVisualizer } from './visualizers/Edreece-AfridiVisualizer';
 
 /** ------------------------------------------------------------------------ **
  * The entire application state is stored in AppState.
@@ -28,12 +30,14 @@ const instruments = List([
   XylophoneInstrument,
   TrumpetInstrument,
   lushboughInstrument,
+  FluteInstrument
 ]);
 const visualizers = List([
   WaveformVisualizer,
   CircleformVisualizer,
   ParticleVisualizer,
   lushboughVisualizer,
+  SinWaveVisualizer
 ]);
 export const defaultState: AppState = Map<string, any>({
   instruments,
