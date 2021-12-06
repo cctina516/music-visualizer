@@ -133,8 +133,8 @@ function Flute({ synth, setSynth }: InstrumentProps): JSX.Element {
 
   return (
     <div className='pv4'>
-      <div className={'trumpetImage'}>
-        <img src={backImage} alt={'Trumpet'} />
+      <div className={'FluteImage'}>
+        <img src={backImage} alt={'Flute'} />
       </div>
       <div className='relative dib h4 w-100 ml4'>
         {Range(2, 7).map((octave) =>

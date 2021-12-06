@@ -37,7 +37,7 @@ const visualizers = List([
   CircleformVisualizer,
   ParticleVisualizer,
   lushboughVisualizer,
-  SinWaveVisualizer
+  // SinWaveVisualizer
 ]);
 export const defaultState: AppState = Map<string, any>({
   instruments,

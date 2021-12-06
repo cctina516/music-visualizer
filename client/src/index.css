@@ -150,3 +150,11 @@ body,
   flex-direction: column;
   margin-bottom: 20px;
 }
+
+.FluteImage {
+  max-width: 10rem;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
