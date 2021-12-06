@@ -30,14 +30,14 @@ const instruments = List([
   XylophoneInstrument,
   TrumpetInstrument,
   lushboughInstrument,
-  FluteInstrument
+  FluteInstrument,
 ]);
 const visualizers = List([
   WaveformVisualizer,
   CircleformVisualizer,
   ParticleVisualizer,
   lushboughVisualizer,
-  SinWaveVisualizer
+  //SinWaveVisualizer
 ]);
 export const defaultState: AppState = Map<string, any>({
   instruments,
