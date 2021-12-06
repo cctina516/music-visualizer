@@ -5,14 +5,11 @@ import { List, Map } from 'immutable';
 import { PianoInstrument } from './instruments/Piano';
 import { lushboughInstrument } from './instruments/lushbough';
 import { WaveformVisualizer } from './visualizers/Waveform';
-<<<<<<< HEAD
-import { lushboughVisualizer } from './visualizers/lushbough';
-=======
-import { CircleformVisualizer } from './visualizers/cctina516-Visualizer';
-import { XylophoneInstrument } from './instruments/cctina516-Instrument';
+import { CircleformVisualizer } from './visualizers/cctina516';
+import { XylophoneInstrument } from './instruments/cctina516';
 import { ParticleVisualizer } from './visualizers/mai873-Particles';
 import { TrumpetInstrument } from './instruments/mai873-Trumpet';
->>>>>>> 1b82e76e09ea66937339940bf334c7c9f9b1f294
+import { lushboughVisualizer } from './visualizers/lushbough';
 
 /** ------------------------------------------------------------------------ **
  * The entire application state is stored in AppState.
@@ -26,23 +23,18 @@ import { TrumpetInstrument } from './instruments/mai873-Trumpet';
  */
 export type AppState = Map<string, any>;
 
-<<<<<<< HEAD
-const instruments = List([PianoInstrument, lushboughInstrument]); //ADD CORE HERE
-const visualizers = List([WaveformVisualizer, lushboughVisualizer]); //add core here
-
-
-=======
 const instruments = List([
   PianoInstrument,
   XylophoneInstrument,
   TrumpetInstrument,
+  lushboughInstrument,
 ]);
 const visualizers = List([
   WaveformVisualizer,
   CircleformVisualizer,
   ParticleVisualizer,
+  //lushboughVisualizer,
 ]);
->>>>>>> 1b82e76e09ea66937339940bf334c7c9f9b1f294
 export const defaultState: AppState = Map<string, any>({
   instruments,
   visualizers,
