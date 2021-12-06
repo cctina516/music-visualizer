@@ -15,7 +15,7 @@ export interface InstrumentProps {
   dispatch: React.Dispatch<DispatchAction>;
   name: string;
   synth: Tone.Synth;
-  setSynth: (f: (oldSynth: Tone.Synth) => Tone.Synth) => void;
+  setSynth: (f: (oldSynth: Tone.Synth) => any) => void;
 }
 
 export class Instrument {
