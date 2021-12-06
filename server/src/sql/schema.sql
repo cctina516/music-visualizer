@@ -23,3 +23,12 @@ VALUES (2, 'London Bridge Is Falling Down', 'G4 A4 G4 F4 E4 F4 G4 D4 E4 F4 E4 F4
 
 INSERT INTO songs (id, song_title, notes, artist, album, difficulty) 
 VALUES (3, 'Jingle Bells', 'E4 E4 E4 E4 E4 E4 E4 G4 C4 D4 E4', 'Kevin MacLeod', 'A Christmas Album', 'Easy');
+
+INSERT INTO songs (id, song_title, notes, artist, album, difficulty) 
+VALUES (4, 'Twinkle Twinkl Little Star', 'C4 C4 G4 G4 A4 A4 G4 F4 F4 E4 E4 D4 D4 C4', 'Little Baby Bum', 'Kids Songs', 'Easy');
+
+INSERT INTO songs (id, song_title, notes, artist, album, difficulty) 
+VALUES (5, 'Happy Birthday', 'D4 D4 E4 D4 G4 F4 D4 D4 E4 D4 A4 G4', 'Patty Hill', 'Birthday Fun', 'Easy');
+
+INSERT INTO songs (id, song_title, notes, artist, album, difficulty) 
+VALUES (6, 'River Flows In You', 'A4 G4 A4 G4 A4 E4 A4 D4 A4 C4 A4 G4 A4 G4 A4 E4 A4 D4', 'Yiruma', 'Piano Music', 'Medium');
