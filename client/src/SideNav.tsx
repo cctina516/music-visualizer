@@ -128,7 +128,6 @@ function Songs({ state, dispatch }: SideNavProps): JSX.Element {
 }
 
 function SongData({ state, dispatch }: SideNavProps): JSX.Element {
-  const [curSong, setCurSong] = useState();
   const songs: List<any> = state.get('songs', List());
   //const current: any = dispatch(new DispatchAction('STOP_SONG', {}));
   console.log('find songs', songs);

@@ -5,7 +5,6 @@ import * as Tone from 'tone';
 // project imports
 import { Visualizer } from '../Visualizers';
 
-
 export const WaveformVisualizer = new Visualizer(
   'Waveform',
   (p5: P5, analyzer: Tone.Analyser) => {
@@ -17,7 +16,7 @@ export const WaveformVisualizer = new Visualizer(
 
     p5.strokeWeight(dim * 0.01);
     p5.stroke(255, 255, 255, 255);
-    
+    p5.noFill();
     const values = analyzer.getValue();
     p5.beginShape();
     for (let i = 0; i < values.length; i++) {
@@ -28,5 +27,5 @@ export const WaveformVisualizer = new Visualizer(
       p5.vertex(x, y);
     }
     p5.endShape();
-  },
+  }
 );
