@@ -128,4 +128,4 @@ function Trumpet({ synth, setSynth }: InstrumentProps): JSX.Element {
   );
 }
 
-export const TrumpetInstrument = new Instrument('Trumpet', Trumpet);
+export const TrumpetInstrument = new Instrument('Mai873', Trumpet);

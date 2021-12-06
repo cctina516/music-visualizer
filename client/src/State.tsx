@@ -30,7 +30,7 @@ const instruments = List([
   XylophoneInstrument,
   TrumpetInstrument,
   lushboughInstrument,
-  FluteInstrument
+  FluteInstrument,
 ]);
 const visualizers = List([
   WaveformVisualizer,

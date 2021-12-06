@@ -47,4 +47,4 @@ const notes = [
   { name: 'C2', file: '/xylophoneSound/C2.wav' },
 ];
 
-export const XylophoneInstrument = new Instrument('Xylophone', Xylophone);
+export const XylophoneInstrument = new Instrument('cctina516', Xylophone);

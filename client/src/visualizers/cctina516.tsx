@@ -41,7 +41,7 @@ class Particle {
 }
 
 export const CircleformVisualizer = new Visualizer(
-  'Circleform',
+  'cctina516',
   (p5: P5, analyzer: Tone.Analyser) => {
     const width = window.innerWidth;
     const height = window.innerHeight / 2;
