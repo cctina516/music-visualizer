@@ -57,4 +57,4 @@ function Drum() {
   );
 }
 
-export const lushboughInstrument = new Instrument('Drums', Drum);
+export const lushboughInstrument = new Instrument('Drums', lushbough);
