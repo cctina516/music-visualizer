@@ -10,7 +10,7 @@ import { Instrument, InstrumentProps } from '../Instruments';
 /** ------------------------------------------------------------------------ **
  * Contains implementation of components for Piano.
  ** ------------------------------------------------------------------------ */
- const pads = [
+const pads = [
   { name: 'kick', keyInput: 'a', file: '/drumSounds/kick.wav' },
   { name: 'snare', keyInput: 's', file: '/drumSounds/snare.wav' },
   { name: 'cymbal', keyInput: 'd', file: '/drumSounds/cymbal.wav' },
@@ -19,26 +19,26 @@ import { Instrument, InstrumentProps } from '../Instruments';
 
 const DrumPad = (props: any) => {
   const keyboard = (e: KeyboardEvent): void => {
-    if ("key" in e && e.key === props.pad.keyInput) {
-      (new Tone.Player(props.pad.file).toDestination().autostart = true)
+    if ('key' in e && e.key === props.pad.keyInput) {
+      new Tone.Player(props.pad.file).toDestination().autostart = true;
     }
-  }
+  };
 
   return (
     <button
       className='drum-button'
       id='pad-buttons'
-      style={{ 
-      height: 300,
-      width: 200,
-      backgroundColor: 'white',
-      color: 'red'
-    }}
-    onKeyPress= {e => keyboard(e)}
+      style={{
+        height: 300,
+        width: 200,
+        backgroundColor: 'white',
+        color: 'red',
+      }}
+      onKeyPress={(e) => keyboard(e)}
     >
       {props.pad.name}
-      {"\n |"} 
-      {"\n"}
+      {'\n |'}
+      {'\n'}
       {props.pad.keyInput}
     </button>
   );
@@ -57,4 +57,4 @@ function Drum() {
   );
 }
 
-export const lushboughInstrument = new Instrument('Drums', lushbough);
+export const lushboughInstrument = new Instrument('lushbough', Drum);
